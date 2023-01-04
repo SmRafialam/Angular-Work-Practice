@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import {Component,OnInit} from '@angular/core'
 
 @Component({
   selector: 'app-SuccessAlert',
@@ -11,10 +11,19 @@ import {Component} from '@angular/core'
       padding: 5px;
       border: 1px solid black;
     }
+    .btn{
+      margin-left: 560px
+    }
   `]
 
 })
 
-export class SuccessAlertComponent{
+export class SuccessAlertComponent implements OnInit {
+  username = "";
+  constructor() {
+    
+   }
 
+  ngOnInit(): void {
+  }
 }

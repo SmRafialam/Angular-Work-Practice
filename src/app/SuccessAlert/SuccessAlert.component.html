@@ -1,2 +1,5 @@
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>UserName: {{ username }}</p>
+<button class="btn btn-primary my-3" [disabled]="username===''">Reset User</button>
 <p class="bg-success">Message has been successfully sent.</p>
 
