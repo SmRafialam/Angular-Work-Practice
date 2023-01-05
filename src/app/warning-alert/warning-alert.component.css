@@ -5,3 +5,9 @@ p{
   padding: 5px;
   border: 1px solid black;
 }
+.btn{
+  margin-left: 550px;
+}
+.whiteText{
+  color: white;
+}

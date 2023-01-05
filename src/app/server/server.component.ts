@@ -6,9 +6,11 @@ import {Component} from '@angular/core'
   styles: [`
     h3{
       color: green;
-      text-align: center
+      text-align: center;
     }
-    
+    .online{
+      color: white;
+    }
   `]
 })
 
@@ -17,5 +19,13 @@ export class serverComponent{
   serverStatus:string = 'offline';
   getServerStatus(){
     return this.serverStatus;
+  }
+
+  constructor(){
+    this.serverStatus = Math.random() > 0.5 ? 'online':'offline';
+
+  }
+  getColor(){
+    return this.serverStatus === 'online'? 'green':'red';
   }
 }

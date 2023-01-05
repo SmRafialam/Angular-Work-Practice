@@ -8,5 +8,5 @@
 <p>{{ serverCreationStatus }}</p>
 <p [innerText] = "allowNewServer"></p>
 <p *ngIf="serverCreated">server was created! server name is {{serverName}}</p>
-<!-- <p>server</p>
-<app-server></app-server> -->
+<!-- <p>server</p>-->
+<app-server *ngFor="let server of servers"></app-server> 

@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WarningAlertComponent implements OnInit {
 
-  constructor() { }
+  secretDisplay = false;
+  log: any[] = [];
+  constructor() {
+
+   }
+
+  showSecretDisplay(){
+    this.secretDisplay = !this.secretDisplay;
+    // this.log.push(this.log.length +1);
+    this.log.push(new Date());
+  }
 
   ngOnInit(): void {
   }
+  
 
 }
