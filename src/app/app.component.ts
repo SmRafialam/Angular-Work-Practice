@@ -10,6 +10,8 @@ export class AppComponent {
 
   serverElements = [{type:'server',name:'TestServer',content:'Just a Test'}];
 
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
   onServerAdded(serverData: {serverName:string, serverContent:string}){
     console.log(serverData);
@@ -28,7 +30,12 @@ export class AppComponent {
   }
 
   onIntervalFired(firedNumber: number){
-    console.log(firedNumber);
+    // console.log(firedNumber);
+    if(firedNumber%2 === 0){
+      this.evenNumbers.push(firedNumber);
+    }else{
+      this.oddNumbers.push(firedNumber);
+    }
   }
 
 
